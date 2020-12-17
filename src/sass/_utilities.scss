@@ -1,0 +1,12 @@
+.spacing > * + * {
+    margin-top: var(--spacer, 2.5rem);
+}
+
+.container {
+    width: 85%;
+    max-width: 130rem;
+    margin: 0 auto;
+    @include mq-max($v-8) {
+        width: 90%;
+    }
+}

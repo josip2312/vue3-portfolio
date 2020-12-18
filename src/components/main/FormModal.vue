@@ -1,22 +1,21 @@
 <template>
     <transition name="fade" mode="out-in">
         <div v-if="isModalVisible" class="overlay">
-            <div class="modal spacing">
+            <div class="modal spacing" v-click-outside-modal="hideModal">
                 <h3 class="heading-3">
-                    Title
+                    {{ modalContent.title }}
                 </h3>
                 <p class="paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illum, natus. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Blanditiis, cumque.
+                    {{ modalContent.message }}
                 </p>
-                <button class="btn" @click="$emit('hide-modal')">Ok</button>
+                <button class="btn" @click="hideModal">Ok</button>
             </div>
         </div>
     </transition>
 </template>
 
 <script>
+import { clickOutsideModal } from '@/directives/click-outside';
 export default {
     name: 'FormModal',
     props: {
@@ -24,9 +23,18 @@ export default {
             type: Boolean,
             default: false,
         },
+        modalContent: {
+            type: Object,
+            required: true,
+        },
     },
-    setup() {
-        return {};
+    directives: {
+        clickOutsideModal,
+    },
+    methods: {
+        hideModal() {
+            this.$emit('hide-modal');
+        },
     },
 };
 </script>
@@ -58,12 +66,14 @@ export default {
     justify-content: center;
 }
 .modal {
+    --spacer: 3rem;
     z-index: 120;
     padding: 3.5rem 5rem;
     background-color: var(--neutral-400);
     border-radius: var(--br-sm);
 
     .paragraph {
+        font-size: var(--s-18);
         max-width: 27.5em;
     }
     .btn {

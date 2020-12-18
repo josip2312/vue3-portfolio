@@ -3,8 +3,8 @@
         <div class="showcase-content spacing">
             <h1 class="heading-1">Delivering quality <span>websites </span></h1>
             <p class="desc">
-                Hi, I'm a web developer passionate about creating beautiful and
-                functional websites
+                Hi, I'm a <span>web developer</span> passionate about creating
+                aesthetically appealing and functional websites.
             </p>
             <div class="buttons">
                 <a class="btn btn-main" href="#work">See my work</a>
@@ -73,6 +73,10 @@ export default {
             max-width: 25em;
             font-size: var(--s-18);
             color: var(--font-paragraph);
+            span {
+                color: var(--accent-2);
+                font-weight: bold;
+            }
         }
         .buttons {
             margin-top: 4rem;

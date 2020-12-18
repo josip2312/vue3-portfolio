@@ -30,8 +30,10 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 2.5rem 15rem;
+    row-gap: 5rem;
+    column-gap: 15rem;
     @include mq-min($v-10) {
+        row-gap: 7.5rem;
         grid-template-columns: 1fr 1fr;
         justify-items: stretch;
     }

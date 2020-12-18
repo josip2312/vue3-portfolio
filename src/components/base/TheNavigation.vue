@@ -1,5 +1,5 @@
 <template>
-    <ul class="nav-items" v-click-outside="hideSidebar">
+    <ul class="nav-items" v-click-outside-nav="hideSidebar">
         <li class="nav-item">
             <router-link class="nav-link" :to="{ name: 'Home' }" tag="button"
                 >Home</router-link
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import { clickOutside } from '@/directives/click-outside';
+import { clickOutsideNav } from '@/directives/click-outside';
 export default {
     name: 'Navigation',
     directives: {
-        clickOutside,
+        clickOutsideNav,
     },
     methods: {
         hideSidebar() {

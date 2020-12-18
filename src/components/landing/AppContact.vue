@@ -1,5 +1,5 @@
 <template>
-    <div class=" container">
+    <div class="container">
         <div class="contact-info" data-aos="fade-up">
             <div class="contact-info-top">
                 <h3 class="heading-3">Get in touch</h3>
@@ -94,18 +94,25 @@
             </div>
         </form>
     </div>
-
-    <FormModal :isModalVisible="isModalVisible" @hide-modal="hideModal" />
+    <Loader :isLoading="isLoading" />
+    <FormModal
+        :isModalVisible="isModalVisible"
+        :modalContent="modalContent"
+        @hide-modal="hideModal"
+    />
 </template>
 
 <script>
 import FormModal from '@/components/main/FormModal';
-import { reactive, ref, toRefs } from 'vue';
+import Loader from '@/components/main/Loader';
+
+import { reactive, ref } from 'vue';
 import axios from 'axios';
 export default {
     name: 'AppContact',
     components: {
         FormModal,
+        Loader,
     },
 
     setup() {
@@ -114,12 +121,15 @@ export default {
             email: '',
             message: '',
         });
+        const modalContent = reactive({
+            title: 'asdasd',
+            message: 'asdasdad',
+        });
+        const isLoading = ref(false);
         const isModalVisible = ref(false);
         const hideModal = () => {
             isModalVisible.value = false;
         };
-        const formRefs = toRefs(form);
-        console.log(formRefs);
 
         const encode = (data) => {
             return Object.keys(data)
@@ -137,6 +147,7 @@ export default {
                 header: { 'Content-Type': 'application/x-www-form-urlencoded' },
             };
             try {
+                isLoading.value = true;
                 await axios.post(
                     '/',
                     encode({
@@ -145,8 +156,16 @@ export default {
                     }),
                     axiosConfig,
                 );
+                isLoading.value = false;
+                modalContent.title = 'Success';
+                modalContent.message =
+                    'The message has been sent successfully. Thank you for contacting me.';
                 isModalVisible.value = true;
             } catch (error) {
+                isLoading.value = false;
+                modalContent.title = 'Whoops!';
+                modalContent.message =
+                    'Something went wrong! Please try sending the message again.';
                 isModalVisible.value = true;
                 console.error(error);
             }
@@ -156,8 +175,10 @@ export default {
             form,
             encode,
             handleSubmit,
+            isLoading,
             isModalVisible,
             hideModal,
+            modalContent,
         };
     },
 };
@@ -254,7 +275,7 @@ export default {
 
             border: 0;
             border-radius: var(--br-sm);
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             width: 100%;
             background-color: var(--neutral-700);
             margin-bottom: var(--s-20);

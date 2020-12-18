@@ -79,7 +79,7 @@
         opacity: 0.9;
     }
     .router-link-exact-active {
-        background-color: var(--neutral-400);
+        background-color: var(--neutral-300);
     }
 }
 </style>

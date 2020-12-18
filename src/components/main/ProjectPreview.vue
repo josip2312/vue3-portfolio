@@ -2,9 +2,7 @@
     <article class="project" :class="project.class" data-aos="fade-up">
         <div class="project-content">
             <h3 class="heading-3 project-title">{{ project.title }}</h3>
-            <p class="project-paragraph">
-                {{ project.paragraph }}
-            </p>
+            <p class="project-paragraph" v-html="project.paragraph"></p>
             <a class="btn btn-tertiary" :href="project.link" target="_blank">
                 <span> Visit site </span>
 
@@ -72,6 +70,10 @@ export default {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: var(--s-18);
+        :deep a {
+            font-weight: bold;
+            color: var(--accent-2);
+        }
 
         @include mq-min($v-12) {
             margin-left: 0;
@@ -111,7 +113,7 @@ export default {
         transition: transform 200ms var(--in-out-sine);
 
         img {
-            border-radius: var(--br-sm);
+            border-radius: var(--br-md);
         }
         &::after {
             content: '';

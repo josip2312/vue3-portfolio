@@ -36,19 +36,21 @@ export default {
 <style lang="scss" scoped>
 #showcase {
     height: 100vh;
-
     background-color: var(--neutral-400);
 }
-#work {
-    padding: 10rem 0;
+#work,
+#skills,
+#contact {
+    padding: 5rem 0;
+    @include mq-min($v-10) {
+        padding: 10rem 0;
+    }
+}
+#work,
+#contact {
     background-color: var(--neutral-600);
 }
 #skills {
-    padding: 10rem 0;
     background-color: var(--neutral-400);
-}
-#contact {
-    padding: 10rem 0;
-    background-color: var(--neutral-600);
 }
 </style>

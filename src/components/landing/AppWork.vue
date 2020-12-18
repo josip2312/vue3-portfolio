@@ -38,7 +38,10 @@ export default {
     flex-direction: column;
 }
 .projects {
-    --spacer: 10rem;
+    --spacer: 7.5rem;
+    @include mq-min($v-10) {
+        --spacer: 10rem;
+    }
 }
 .btn {
     font-size: 1.8rem;

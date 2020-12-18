@@ -7,11 +7,7 @@
             <h3 class="heading-4">
                 {{ skill.title }}
             </h3>
-            <p class="skill-paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                temporibus non reprehenderit architecto illo? Tenetur officiis
-                perferendis quas dolorum architecto!
-            </p>
+            <p class="skill-paragraph" v-html="skill.paragraph"></p>
         </div>
     </div>
 </template>
@@ -37,7 +33,6 @@ export default {
     flex-direction: column;
     align-items: flex-start;
 
-    padding: 3rem 0;
     border-radius: var(--br-md);
     font-size: 1.8rem;
 
@@ -57,6 +52,7 @@ export default {
         }
     }
     &-desc {
+        margin-top: 1.5rem;
         .heading-4 {
             font-size: 2.4rem;
             margin-bottom: 2.5rem;
@@ -65,6 +61,12 @@ export default {
 
     &-paragraph {
         max-width: 30em;
+        line-height: 1.8;
+
+        :deep span {
+            font-weight: bold;
+            color: var(--accent-2);
+        }
 
         @include mq-min($v-10) {
             max-width: 100%;
@@ -74,5 +76,8 @@ export default {
 
 .skill:focus {
     outline: 1px solid var(--accent-2);
+}
+.accent {
+    color: red;
 }
 </style>

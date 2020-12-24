@@ -73,7 +73,6 @@ export default {
     border-radius: var(--br-sm);
 
     .paragraph {
-        font-size: var(--s-18);
         max-width: 27.5em;
     }
     .btn {

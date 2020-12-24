@@ -68,7 +68,6 @@
     flex: 1;
     max-width: 60rem;
 
-    font-size: var(--s-18);
     line-height: 1.7;
     opacity: 0;
     animation: fadeLeft 500ms ease forwards 600ms;

@@ -38,17 +38,22 @@ export default {
 
 .showcase {
     position: relative;
-    height: 100%;
 
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15rem 0;
+
+    @include mq-min($v-10) {
+        padding: 10rem 0;
+        flex-direction: row;
+    }
 
     &-content {
+        flex: 1;
+
         opacity: 0;
         animation: appear 800ms var(--in-out-sine) forwards 100ms;
-        grid-row: 1 / 5;
-        grid-column: 1 / -1;
 
         z-index: 10;
         text-align: center;
@@ -57,10 +62,8 @@ export default {
         justify-content: center;
         align-items: center;
         @include mq-min($v-10) {
-            align-items: start;
+            align-items: flex-start;
             text-align: left;
-            grid-column: 1 / -1;
-            grid-row: 2 / 5;
         }
         .heading-1 {
             max-width: 60rem;
@@ -71,7 +74,6 @@ export default {
         .desc {
             width: 100%;
             max-width: 25em;
-            font-size: var(--s-18);
             color: var(--font-paragraph);
             span {
                 color: var(--accent-2);
@@ -98,15 +100,9 @@ export default {
     }
     &-image {
         z-index: 0;
-        grid-row: 4 / -1;
-        grid-column: 1 / -1;
+        flex: 1;
         align-self: center;
         width: 100%;
-        @include mq-min($v-10) {
-            grid-column: 5 / -1;
-            grid-row: 1 / -1;
-            align-self: center;
-        }
     }
 }
 </style>

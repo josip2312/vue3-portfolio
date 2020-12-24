@@ -60,13 +60,10 @@ export default {
     }
     &-title {
         margin-bottom: var(--s-28);
-
-        font-size: var(--s-36);
         letter-spacing: 1px;
     }
     &-paragraph {
         max-width: 22.5em;
-        font-size: var(--s-18);
         margin-left: auto;
         margin-right: auto;
         margin-bottom: var(--s-18);

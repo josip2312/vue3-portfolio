@@ -176,7 +176,7 @@ svg {
         transform: scale(1) translateX(0);
     }
     @include mq-min($v-10) {
-        transform: scale(0.9) translateX(7.5rem);
+        transform: scale(1.1);
     }
 
     --nav: #162846;

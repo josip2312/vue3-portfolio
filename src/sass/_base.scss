@@ -18,7 +18,10 @@ html {
         font-size: 55%;
     }
     @include mq-max($v-6) {
-        font-size: 50%;
+        font-size: 47.5%;
+    }
+    @include mq-max($v-3) {
+        font-size: 45%;
     }
 }
 

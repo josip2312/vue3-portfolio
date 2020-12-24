@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 #showcase {
-    height: 100vh;
+    //height: 100vh;
     background-color: var(--neutral-400);
 }
 #work,

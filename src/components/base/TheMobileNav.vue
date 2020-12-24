@@ -69,9 +69,9 @@
         justify-content: center;
         align-items: center;
         transition: opacity 200ms ease-out;
-        padding: 1.35rem 0;
+        padding: 1rem 0;
         svg {
-            width: 3rem;
+            width: 2.25rem;
             margin-right: 0.5rem;
         }
     }

@@ -15,7 +15,6 @@
 <script>
 export default {
     name: 'SkillSingle',
-
     props: {
         skill: {
             type: Object,
@@ -28,13 +27,10 @@ export default {
 <style lang="scss" scoped>
 .skill {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     border-radius: var(--br-md);
-    font-size: 1.8rem;
 
     transition: transform 250ms cubic-bezier(0.49, 0.07, 0.36, 1);
     .icon {
@@ -63,7 +59,7 @@ export default {
         max-width: 30em;
         line-height: 1.8;
 
-        :deep span {
+        :deep(span) {
             font-weight: bold;
             color: var(--accent-2);
         }

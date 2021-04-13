@@ -67,7 +67,7 @@ export default {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: var(--s-18);
-        :deep a {
+        :deep(a) {
             font-weight: bold;
             color: var(--accent-2);
         }

@@ -13,7 +13,8 @@
                     Science at the University of Mostar.
                 </p>
                 <p class="about-bio">
-                    Currently actively searching for a job.
+                    Working as a Frontend Developer for one of the top software companies in the eastern European region - 
+                    <a class="about-link" target="_blank" href="https://www.nsoft.com/">NSoft</a>
                 </p>
                 <div class="about-links">
                     <a
@@ -77,11 +78,9 @@
         margin-left: 3.5rem;
     }
 }
-.about-links {
-    .about-link {
-        margin-right: 2.5rem;
-        color: var(--accent-2);
-        text-decoration: underline;
-    }
+.about-link {
+    margin-right: 2.5rem;
+    color: var(--accent-2);
+    text-decoration: underline;
 }
 </style>

@@ -7,7 +7,7 @@ export const skills = [
     {
         title: 'Backend',
         paragraph:
-            'Building API-s with <span>Node.js</span> and <span>Express</span> while using <span>MongoDB</span> as a database. Understanding of <span>REST</span> principles, authentication and working with third party API-s. ',
+            'Building API-s with <span>Node.js</span> and <span>Express</span> while prefering <span>MongoDB</span> or <span>PostgreSQL</span> as a database. Understanding of <span>REST</span> principles, authentication and working with third party API-s. ',
         imgSrc: require('@/assets/icons/backend.svg'),
     },
     {

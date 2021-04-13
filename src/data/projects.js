@@ -12,7 +12,7 @@ export const showcaseProjects = [
         paragraph:
             'Trivia game featuring different categories using the <a href="https://opentdb.com/" target="_blank">OpenTriviaDB</a> API.',
         imgSrc: require('@/assets/images/trivia.jpg'),
-        link: 'https://laughing-northcutt-e63a20.netlify.app/',
+        link: 'https://trivia-app-game.netlify.app/',
         class: 'project-two',
     },
     {
@@ -20,7 +20,7 @@ export const showcaseProjects = [
         paragraph:
             'A website for a potential acommodation and interior design related website.',
         imgSrc: require('@/assets/images/decbase.jpg'),
-        link: 'http://studenti.sum.ba:82/2019/g13/views/',
+        link: 'https://decbase-template.netlify.app/',
         class: 'project-three',
     },
 ];
@@ -38,14 +38,14 @@ export const projects = [
         paragraph:
             'Trivia game featuring different categories using the <a href="https://opentdb.com/" target="_blank">OpenTriviaDB</a> API.',
         imgSrc: require('@/assets/images/trivia.jpg'),
-        link: 'https://laughing-northcutt-e63a20.netlify.app/',
+        link: 'https://trivia-app-game.netlify.app/',
     },
     {
         title: 'Decbase',
         paragraph:
             'A website for a potential acommodation and interior design related website.',
         imgSrc: require('@/assets/images/decbase.jpg'),
-        link: 'http://studenti.sum.ba:82/2019/g13/views/',
+        link: 'https://decbase-template.netlify.app/',
     },
     {
         title: 'Landing page',
@@ -54,16 +54,16 @@ export const projects = [
         link: 'https://priceless-boyd-880972.netlify.app/',
     },
     {
-        title: 'Movies',
+        title: 'Manage',
         paragraph:
-            'A movie searching website using the <a href="https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial" target="_blank">IMDB unofficial</a> API',
-        imgSrc: require('@/assets/images/movies.jpg'),
-        link: 'https://quirky-hermann-5edc71.netlify.app/',
+            "Manage modern looking landing page.",
+        imgSrc: require('@/assets/images/manage.jpg'),
+        link: 'https://manage-frontend-mentor.netlify.app/',
     },
     {
         title: 'Job listings',
         paragraph: 'A project that implements job filtering based on tags.',
         imgSrc: require('@/assets/images/listings.jpg'),
-        link: 'https://objective-brattain-c06a31.netlify.app/',
+        link: 'https://job-listings-nsoft.netlify.app/',
     },
 ];
